@@ -1,0 +1,260 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: url("../img/main-background-bg.png");
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+/*sidebar bottom justificaiton using div-id relationship*/
+#sidebar-bottom {
+  position: relative; 
+  top: 250px; /*needs to be positioned properly*/
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+
+.sidebar-nav li a:hover {
+  /*color: #fff;*/
+  background-color: rgba(0,0,102,0.23);
+  text-decoration: none;
+}
+
+/*
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    color: #fff;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(0,0,51, 0.6);
+    border-bottom-color: transparent;
+}
+*/
+
+
+.sidebar-nav > li.active > a,
+.sidebar-nav > li.active > a:hover,
+.sidebar-nav > li.active > a:focus {
+    color: #ffffff;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(0,0,51, .60);
+    border-bottom-color: transparent;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.inset {
+  padding: 20px;
+}
+
+@media (max-width:767px) {
+
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    left: 0;
+  }
+
+  #wrapper.active {
+    position: relative;
+    left: 250px;
+  }
+
+  #wrapper.active #sidebar-wrapper {
+    left: 250px;
+    width: 250px;
+    transition: all 0.4s ease 0s;
+  }
+
+  #menu-toggle {
+    display: inline-block;
+  }
+
+  .inset {
+    padding: 15px;
+  }
+
+}
+
+.pic {
+    float: right;
+    margin-right: 10px;
+}
+
+.snack {
+    float: left;
+    margin-left: 15px;
+}
+
+.b {
+    padding: 4px 15px !important;
+}
+
+
+/*Panel tabs*/
+.panel-tabs {
+    position: relative;
+    bottom: 0px;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 4px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: #ffffff;
+}
+
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #ffffff;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255, .20);
+    border-bottom-color: transparent;
+}
+
+/*End panel tab*/
+
+.pet_info {
+    background: #C0C0C0;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: block;
+    
+}
+
+.gen_pref {
+    background: #C0C0C0;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.pet_portrait {
+    background: #C0C0C0;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.scheduler {
+    background: #C0C0C0;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.notifs {
+    background: #C0C0C0;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
+.panel-notitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: inherit;
+  visibility: hidden;
+}
+
+.panel-notitle > a {
+  color: inherit;
+}
